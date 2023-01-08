@@ -1,0 +1,14 @@
+# 홀수만 제거
+# index 제거시, 기존 인덱스의 위치가 당겨지므로 누락 방지 조치 필요
+
+numbers = [3, 5, 7, 2, 10, 11, 13, 4, 15, 6, 17, 20]
+
+i = 0
+while i < len(numbers):
+    if numbers[i] % 2 != 0:
+        del numbers[i]
+    else:                       # 짝수에만 i += 1 하여 누락 index 방지
+        i += 1                  # index가 한칸씩 당겨지므로 누락 가능
+
+numbers.sort()
+print(numbers)
