@@ -1,0 +1,12 @@
+# 문장(str) 배열 순서 바꾸기
+
+sentence = "way a is there will a is there where"
+
+def reverse_sentence(sentence):
+    
+    sentence = sentence.split()
+    sentence.reverse()
+    sentence = " ".join(sentence)
+    return sentence
+
+print(reverse_sentence(sentence))
