@@ -1,0 +1,13 @@
+# 문자열에서 숫자 제거 후 문자 반환
+inputs = input("단어를 입력하세요 : ")
+
+def find_string(inputs, result):
+    
+    for i in inputs:
+        if i.isdigit():
+            inputs = inputs.replace(i, " ")
+    result.extend(inputs.split())
+
+result = []
+find_string(inputs, result)
+print(result)
